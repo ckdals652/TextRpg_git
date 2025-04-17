@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TextRpg_Retey")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb2e04b2fde06a2ba34c3139538dd35c8657a82d")]
 [assembly: System.Reflection.AssemblyProductAttribute("TextRpg_Retey")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TextRpg_Retey")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

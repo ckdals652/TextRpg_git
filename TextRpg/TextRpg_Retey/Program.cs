@@ -43,7 +43,7 @@ namespace TextRpg_Retey
                             _player.printChoice();
                             break;
                         case MainMenu.Inventory:
-                            _inventory.printChoice();
+                            _inventory.printChoice(_player, _inventory, _shop);
                             break;
                         case MainMenu.Shop:
                             _shop.printChoice(_player, _inventory, _shop);
@@ -222,12 +222,12 @@ namespace TextRpg_Retey
 
                 for (int i = 0; i < inventory.inventory_item_weapon.Count; i++)
                 {
-                    Console.WriteLine($"{i + 1}. {inventory.inventory_item_weapon[i].OutInfo()}");
+                    Console.WriteLine($" {inventory.inventory_item_weapon[i].OutInfo()}");
                 }
 
-                for (int i = 0; i < shop.shop_item_armor.Count; i++)
+                for (int i = 0; i < inventory.inventory_item_armor.Count; i++)
                 {
-                    Console.WriteLine($"{i + 1 + shop.shop_item_weapon.Count}. {shop.shop_item_armor[i].OutInfo()}");
+                    Console.WriteLine($" {shop.shop_item_armor[i].OutInfo()}");
                 }
 
                 Console.WriteLine("1. 장착 관리");
@@ -499,6 +499,7 @@ namespace TextRpg_Retey
                 explanation = _explanation;
             }
         }
+
         public enum Job
         {
             Warrior = 1,
