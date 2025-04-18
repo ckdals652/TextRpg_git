@@ -3,13 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextRpg", "TextRpg\TextRpg.csproj", "{884E20E1-F523-48BE-9EE1-6AD8A5FC570F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextRpg_Retey", "TextRpg_Retey\TextRpg_Retey.csproj", "{FAD371CA-CD8B-4BBC-B5E3-715B545B47BC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{F1A7CB7F-BED7-47EF-B463-D2C79ED8B477}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackUp", "BackUp\BackUp.csproj", "{CEFA4EA7-D322-4CB0-B46B-4374EF741B68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,22 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{884E20E1-F523-48BE-9EE1-6AD8A5FC570F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{884E20E1-F523-48BE-9EE1-6AD8A5FC570F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{884E20E1-F523-48BE-9EE1-6AD8A5FC570F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{884E20E1-F523-48BE-9EE1-6AD8A5FC570F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FAD371CA-CD8B-4BBC-B5E3-715B545B47BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FAD371CA-CD8B-4BBC-B5E3-715B545B47BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAD371CA-CD8B-4BBC-B5E3-715B545B47BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAD371CA-CD8B-4BBC-B5E3-715B545B47BC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F1A7CB7F-BED7-47EF-B463-D2C79ED8B477}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F1A7CB7F-BED7-47EF-B463-D2C79ED8B477}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F1A7CB7F-BED7-47EF-B463-D2C79ED8B477}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F1A7CB7F-BED7-47EF-B463-D2C79ED8B477}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CEFA4EA7-D322-4CB0-B46B-4374EF741B68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CEFA4EA7-D322-4CB0-B46B-4374EF741B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CEFA4EA7-D322-4CB0-B46B-4374EF741B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CEFA4EA7-D322-4CB0-B46B-4374EF741B68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

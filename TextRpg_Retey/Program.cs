@@ -94,7 +94,7 @@ namespace TextRpg_Retey
                     playerName = Console.ReadLine();
                 }
                 _player = new Player(playerName);
-                Console.WriteLine($"{_player}님이 입장하셨습니다.");
+                Console.WriteLine($"{_player.name}님이 입장하셨습니다.");
             }
             public void ChoiceJob()
             {
@@ -275,14 +275,15 @@ namespace TextRpg_Retey
 
                     for (int i = 0; i < inventory.inventory_item_armor.Count; i++)
                     {
-                        Console.WriteLine($"{i + 1 + inventory.inventory_item_weapon.Count}. {inventory.inventory_item_weapon[i].OutInfo()}");
+                        Console.WriteLine($"{i + 1 + inventory.inventory_item_weapon.Count}. {inventory.inventory_item_armor[i].OutInfo()}");
                     }
 
                     Console.WriteLine("\n0. 나가기\n");
 
-                    Console.Write("장착할 아이템을 선택하세요\n");
+                    Console.Write("장착 / 해제 할 아이템을 선택하세요\n");
                     string input = Console.ReadLine();
 
+                    //숫자이고 , 0과 (무기수+방어구수)의 사이이 값일 때 다음 루프
                     if (!int.TryParse(input, out int purchaseNum) || purchaseNum < 0 || purchaseNum > inventory.inventory_item_weapon.Count + inventory.inventory_item_armor.Count)
                     {
                         Console.WriteLine("\n유효한 숫자를 입력해주세요.\n");
@@ -296,9 +297,9 @@ namespace TextRpg_Retey
                     }
 
                     //무기 장착 처리
-                    if (purchaseNum-1 <= inventory.inventory_item_weapon.Count)
+                    if (purchaseNum - 1 < inventory.inventory_item_weapon.Count)
                     {
-                        inventory.inventory_item_weapon[purchaseNum-1].isEquipped = !inventory.inventory_item_weapon[purchaseNum - 1].isEquipped;
+                        inventory.inventory_item_weapon[purchaseNum - 1].isEquipped = !inventory.inventory_item_weapon[purchaseNum - 1].isEquipped;
                         //창착되지 않았다면 창착하고 공격력 올리고
                         if (inventory.inventory_item_weapon[purchaseNum - 1].isEquipped == true)
                         {
@@ -315,7 +316,7 @@ namespace TextRpg_Retey
                     //방어구 장착 처리
                     else
                     {
-                        inventory.inventory_item_armor[purchaseNum - 1-inventory_item_weapon.Count].isEquipped = !inventory.inventory_item_weapon[purchaseNum - 1- inventory_item_weapon.Count].isEquipped;
+                        inventory.inventory_item_armor[purchaseNum - 1 - inventory.inventory_item_weapon.Count].isEquipped = !inventory.inventory_item_armor[purchaseNum - 1 - inventory.inventory_item_weapon.Count].isEquipped;
                         //창착되지 않았다면 창착하고 방어력 올리고
                         if (inventory.inventory_item_armor[purchaseNum - 1].isEquipped == true)
                         {
@@ -521,9 +522,9 @@ namespace TextRpg_Retey
                 {
                     waponInfo = name + " | " + "공격력" + attack + " | " + "판매완료" + " | " + explanation;
                 }
-                else if(isEquipped == true)
+                else if (isEquipped == true)
                 {
-                    waponInfo = "[E]"+name + " | " + "공격력" + attack + " | " + "판매완료" + " | " + explanation;
+                    waponInfo = "[E]" + name + " | " + "공격력" + attack + " | " + "판매완료" + " | " + explanation;
                 }
                 else
                 {
@@ -564,9 +565,9 @@ namespace TextRpg_Retey
                 {
                     armorInfo = name + " | " + "방어력" + defense + " | " + "판매완료" + " | " + explanation;
                 }
-                else if(isEquipped == true)
+                else if (isEquipped == true)
                 {
-                    armorInfo = "[E]"+name + " | " + "방어력" + defense + " | " + "판매완료" + " | " + explanation;
+                    armorInfo = "[E]" + name + " | " + "방어력" + defense + " | " + "판매완료" + " | " + explanation;
                 }
                 else
                 {
